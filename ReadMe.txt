@@ -1,0 +1,1 @@
+The classes are all written in one .cpp file. Each type (TAInt, TADouble...) and comparator (greaterThan, lessThan .....) is represented in a different class.  
