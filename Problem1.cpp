@@ -449,6 +449,5 @@ public:
 };
 void main()
 {
-	TABool k1();
 	system("pause");
 }
