@@ -1,6 +1,7 @@
 #pragma once
 #ifndef TAInt_h
 #define TAInt_h
+#include <iostream>
 class TAInt {
 	static std::string name;
 private:
