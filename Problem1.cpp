@@ -1,82 +1,58 @@
-#include <iostream>
 #include <cmath>
+#include <iostream>
+#include "TAInt.h"
+#include "TABool.h"
+#include "TADouble.h"
 using namespace std;
 
-class TAInt {
-private: int x;
+
+class TANot {
+private:
+	TABool y;
 public:
-	TAInt()
+	TANot(TABool x)
 	{
-		this->x = 0;
+		x.getValue() ? y.setValue(false) : y.setValue(true);
 	}
-	TAInt(int x)
+	TABool NOT(TABool x)
 	{
-		this->x = x;
-	}
-	void setValue(int x)
-	{
-		this->x = x;
-	}
-	int getValue()
-	{
-		return x;
-	}
-};
-class TADouble {
-private: double x;
-public:
-	TADouble()
-	{
-		this->x = 0;
-	}
-	TADouble(double x)
-	{
-		this->x = x;
-	}
-	void setValue(double x)
-	{
-		this->x = x;
-	}
-	double getValue()
-	{
-		return x;
-	}
-};
-class TABool {
-private: bool x;
-public:
-	TABool()
-	{
-		this->x = 0;
-	}
-	TABool(bool x)
-	{
-		this->x = x;
-	}
-	void setValue(bool x)
-	{
-		this->x = x;
-	}
-	bool getValue()
-	{
-		return x;
+		y = x;
+		x.getValue() ? y.setValue(false) : y.setValue(true);
+		return y;
 	}
 };
 class TACeiling {
 private:
-	TAInt x;
+	TAInt value;
 public:
 	TACeiling(TADouble x)
 	{
-		this->x.setValue(ceil(x.getValue()));
+		value.set(ceil(x.getValue()));
 	}
 	void setCeiling(TADouble x)
 	{
-		this->x.setValue(ceil(x.getValue()));
+		value.set(ceil(x.getValue()));
 	}
 	TAInt getValue()
 	{
-		return x;
+		return value;
+	}
+};
+class TAFloor {
+private:
+	TAInt value;
+public:
+	TAFloor(TADouble x)
+	{
+		value.set(floor(x.getValue()));
+	}
+	void setFloor(TADouble x)
+	{
+		value.set(floor(x.getValue()));
+	}
+	TAInt getValue()
+	{
+		return value;
 	}
 };
 class TAGreaterThan {
@@ -393,6 +369,60 @@ public:
 		return result;
 	}
 };
+class TAXOR {
+private:
+	bool result;
+public:
+	TAXOR(TABool x, TABool y)
+	{
+		result = x.getValue() != y.getValue() ? true: false;
+	}
+	TAXOR(TABool x, TALessThan y)
+	{
+		result = x.getValue() != y.getResult() ? true : false;
+	}
+	TAXOR(TABool x, TALessThanOrEquals y)
+	{
+		result = x.getValue() != y.getResult() ? true : false;
+	}
+	TAXOR(TABool x, TAGreaterThan y)
+	{
+		result = x.getValue() != y.getResult() ? true : false;
+	}
+	TAXOR(TABool x, TAGreaterThanOrEquals y)
+	{
+		result = x.getValue() != y.getResult() ? true : false;
+	}
+	TAXOR(TABool x, TAEquals y)
+	{
+		result = x.getValue() != y.getResult() ? true : false;
+	}
+	//
+	TAXOR(TALessThan y, TABool x)
+	{
+		result = x.getValue() != y.getResult() ? true : false;
+	}
+	TAXOR(TAGreaterThan y, TABool x)
+	{
+		result = x.getValue() != y.getResult() ? true : false;
+	}
+	TAXOR(TALessThanOrEquals y, TABool x)
+	{
+		result = x.getValue() != y.getResult() ? true : false;
+	}
+	TAXOR(TAGreaterThanOrEquals y, TABool x)
+	{
+		result = x.getValue() != y.getResult() ? true : false;
+	}
+	TAXOR(TAEquals y, TABool x)
+	{
+		result = x.getValue() != y.getResult() ? true : false;
+	}
+	bool getResult()
+	{
+		return result;
+	}
+};
 class TAAnd {
 private:
 	bool result;
@@ -449,5 +479,7 @@ public:
 };
 void main()
 {
+
+	TAInt x;
 	system("pause");
 }
