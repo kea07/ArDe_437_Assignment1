@@ -8,16 +8,16 @@ class TALessThan {
 	static std::string name;
 private:
 	bool result;
+	TADouble value1;
+	TADouble value2;
 public:
 	TALessThan(TAInt,TAInt);
 	TALessThan(TADouble,TADouble);
 	TALessThan(TAInt,TACeiling);
 	TALessThan(TAInt,TADouble);
 	TALessThan(TADouble,TAInt);
-	void isGreaterThan(TADouble,TADouble);
-	void isGreaterThan(TAInt, TAInt);
-	void isGreaterThan(TAInt , TADouble);
-	void isGreaterThan(TADouble, TAInt);
+	void evaluate();
 	bool getResult();
+	void List();
 };
 #endif

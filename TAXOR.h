@@ -11,20 +11,24 @@
 class TAXOR {
 	static std::string name;
 private:
-	bool result;
+	TABool result;
+	TABool value1;
+	TABool value2;
 public:
 	TAXOR(TABool , TABool );
 	TAXOR(TABool , TALessThan );
 	TAXOR(TABool , TALessThanOrEquals );
 	TAXOR(TABool , TAGreaterThan );
 	TAXOR(TABool , TAGreaterThanOrEquals );
-	TAXOR(TABool , TAEquals );
+	TAXOR(TABool , TAEqual );
 	//
 	TAXOR(TALessThan , TABool );
 	TAXOR(TAGreaterThan , TABool );
 	TAXOR(TALessThanOrEquals , TABool );
 	TAXOR(TAGreaterThanOrEquals , TABool );
-	TAXOR(TAEquals , TABool );
-	bool getResult();
+	TAXOR(TAEqual , TABool );
+	void evaluate();
+	TABool getResult();
+	void List();
 };
 #endif

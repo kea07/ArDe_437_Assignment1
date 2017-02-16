@@ -8,16 +8,16 @@ class TAGreaterThanOrEquals {
 	static std::string name;
 private:
 	bool result;
+	TADouble value1;
+	TADouble value2;
 public:
 	TAGreaterThanOrEquals(TAInt,TAInt);
 	TAGreaterThanOrEquals(TADouble,TADouble);
 	TAGreaterThanOrEquals(TAInt,TACeiling);
 	TAGreaterThanOrEquals(TAInt,TADouble);
 	TAGreaterThanOrEquals(TADouble,TAInt);
-	void isGreaterThan(TADouble,TADouble);
-	void isGreaterThan(TAInt, TAInt);
-	void isGreaterThan(TAInt , TADouble);
-	void isGreaterThan(TADouble, TAInt);
 	bool getResult();
+	void evaluate();
+	void List();
 };
 #endif

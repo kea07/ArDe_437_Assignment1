@@ -7,10 +7,13 @@
 class TACeiling {
 	static std::string name;
 private:
-	TAInt value;
+	TAInt result;
+	TADouble value1;
 public:
 	TACeiling(TADouble);
 	void setCeiling(TADouble);
 	TAInt getValue();
+	void evaluate();
+	void List();
 };
 #endif

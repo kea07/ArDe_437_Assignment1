@@ -18,3 +18,12 @@ double TADouble::getValue()
 {
 	return value;
 }
+void TADouble::List()
+{
+	if (variableName == "")
+		std::cout << TADouble::name.c_str() << std::endl;
+	else
+	{
+		std::cout << "( " << variableName.c_str() << " )" << std::endl;
+	}
+}

@@ -8,9 +8,12 @@ class TANot {
 	static std::string name;
 private:
 	TABool y;
+	TABool result;
 public:
 	TANot(TABool);
 	void set(TABool);
+	void evaluate();
 	TABool getValue();
+	void List();
 };
 #endif

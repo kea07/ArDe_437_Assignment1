@@ -1,53 +1,46 @@
 #include "TAEqual.h"
-
-std::string TAEquals::name = "TAEquals";
-TAEquals::TAEquals(TAInt x, TAInt y)
+std::string TAEqual::name = "TAEqual";
+TAEqual::TAEqual(TAInt x, TAInt y)
 {
-	result = x.getValue() == y.getValue() ? true : false;
+	value1.setValue(x.getValue());
+	value2.setValue(y.getValue());
 }
 
-TAEquals::TAEquals(TADouble x, TADouble y)
+void TAEqual::evaluate()
 {
-	result = x.getValue() == y.getValue() ? true : false;
+	result = value1.getValue() == value2.getValue();
+}
+TAEqual::TAEqual(TADouble x, TADouble y)
+{
+	value1.setValue(x.getValue());
+	value2.setValue(y.getValue());
 }
 
-TAEquals::TAEquals(TAInt x, TACeiling y)
+TAEqual::TAEqual(TAInt x, TACeiling y)
 {
-	result = x.getValue() == y.getValue().getValue() ? true : false;
+	value1.setValue(x.getValue());
+	value2.setValue(y.getValue().getValue());
 }
 
-TAEquals::TAEquals(TAInt x, TADouble y)
-{
-	std::cout << "Type mismatch! Cannot compare the values of different types." << std::endl;
-}
-
-TAEquals::TAEquals(TADouble x, TAInt y)
-
-{
-	std::cout << "Type mismatch! Cannot compare the values of different types." << std::endl;
-}
-
-void TAEquals::isEqual(TADouble x,TADouble y)
-{
-	result = x.getValue() == y.getValue() ? true : false;
-}
-
-void TAEquals::isEqual(TAInt x, TAInt y)
-{
-	result = x.getValue() == y.getValue() ? true : false;
-}
-
-void TAEquals::isEqual(TAInt x, TADouble y)
+TAEqual::TAEqual(TAInt x, TADouble y)
 {
 	std::cout << "Type mismatch! Cannot compare the values of different types." << std::endl;
 }
 
-void TAEquals::isEqual(TADouble x, TAInt y)
+TAEqual::TAEqual(TADouble x, TAInt y)
 {
 	std::cout << "Type mismatch! Cannot compare the values of different types." << std::endl;
 }
-
-bool TAEquals::getResult()
+bool TAEqual::getResult()
 {
 	return result;
+}
+void TAEqual::List()
+{
+	if (true)
+		std::cout << TAEqual::name.c_str() << std::endl;
+	else
+	{
+		std::cout << "( " << " )" << std::endl;
+	}
 }

@@ -12,5 +12,6 @@ public:
 	TADouble(std::string);
 	void setValue(double);
 	double getValue();
+	void List();
 };
 #endif

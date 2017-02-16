@@ -12,5 +12,6 @@ public:
 	TAInt(std::string);
 	void set(int);
 	int getValue();
+	void List();
 };
 #endif 

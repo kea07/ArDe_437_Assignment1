@@ -1,19 +1,25 @@
 #include "TALessThan.h"
-
 std::string TALessThan::name = "TALessThan";
 TALessThan::TALessThan(TAInt x, TAInt y)
 {
-	result = x.getValue() < y.getValue() ? true : false;
+	value1.setValue(x.getValue());
+	value2.setValue(y.getValue());
 }
 
+void TALessThan::evaluate()
+{
+	result = value1.getValue() < value2.getValue();
+}
 TALessThan::TALessThan(TADouble x, TADouble y)
 {
-	result = x.getValue() < y.getValue() ? true : false;
+	value1.setValue(x.getValue());
+	value2.setValue(y.getValue());
 }
 
 TALessThan::TALessThan(TAInt x, TACeiling y)
 {
-	result = x.getValue() < y.getValue().getValue() ? true : false;
+	value1.setValue(x.getValue());
+	value2.setValue(y.getValue().getValue());
 }
 
 TALessThan::TALessThan(TAInt x, TADouble y)
@@ -22,32 +28,19 @@ TALessThan::TALessThan(TAInt x, TADouble y)
 }
 
 TALessThan::TALessThan(TADouble x, TAInt y)
-
 {
 	std::cout << "Type mismatch! Cannot compare the values of different types." << std::endl;
 }
-
-void TALessThan::isGreaterThan(TADouble x,TADouble y)
-{
-	result = x.getValue() < y.getValue() ? true : false;
-}
-
-void TALessThan::isGreaterThan(TAInt x, TAInt y)
-{
-	result = x.getValue() < y.getValue() ? true : false;
-}
-
-void TALessThan::isGreaterThan(TAInt x, TADouble y)
-{
-	std::cout << "Type mismatch! Cannot compare the values of different types." << std::endl;
-}
-
-void TALessThan::isGreaterThan(TADouble x, TAInt y)
-{
-	std::cout << "Type mismatch! Cannot compare the values of different types." << std::endl;
-}
-
 bool TALessThan::getResult()
 {
 	return result;
+}
+void TALessThan::List()
+{
+	if (true)
+		std::cout << TALessThan::name.c_str() << std::endl;
+	else
+	{
+		std::cout << "( " << " )" << std::endl;
+	}
 }

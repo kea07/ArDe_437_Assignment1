@@ -12,19 +12,23 @@ class TAAnd {
 	static std::string name;
 private:
 	bool result;
+	bool value1;
+	bool value2;
 public:
 	TAAnd(TABool , TABool );
 	TAAnd(TABool , TALessThan );
 	TAAnd(TABool , TALessThanOrEquals );
 	TAAnd(TABool , TAGreaterThan );
 	TAAnd(TABool , TAGreaterThanOrEquals );
-	TAAnd(TABool , TAEquals );
+	TAAnd(TABool , TAEqual );
 	//
 	TAAnd(TALessThan , TABool );
 	TAAnd(TAGreaterThan , TABool );
 	TAAnd(TALessThanOrEquals , TABool );
 	TAAnd(TAGreaterThanOrEquals , TABool );
-	TAAnd(TAEquals , TABool );
+	TAAnd(TAEqual , TABool );
+	void evaluate();
 	bool getResult();
+	void List();
 };
 #endif

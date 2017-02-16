@@ -11,20 +11,24 @@
 class TAOr {
 	static std::string name;
 private:
-	bool result;
+	TABool result;
+	TABool value1;
+	TABool value2;
 public:
 	TAOr(TABool , TABool );
 	TAOr(TABool , TALessThan );
 	TAOr(TABool , TALessThanOrEquals );
 	TAOr(TABool , TAGreaterThan );
 	TAOr(TABool , TAGreaterThanOrEquals );
-	TAOr(TABool , TAEquals );
+	TAOr(TABool , TAEqual );
 	//
 	TAOr(TALessThan , TABool );
 	TAOr(TAGreaterThan , TABool );
 	TAOr(TALessThanOrEquals , TABool );
 	TAOr(TAGreaterThanOrEquals , TABool );
-	TAOr(TAEquals , TABool );
-	bool getResult();
+	TAOr(TAEqual , TABool );
+	void evaluate();
+	TABool getResult();
+	void List();
 };
 #endif

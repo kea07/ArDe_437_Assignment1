@@ -2,62 +2,92 @@
 std::string TAXOR::name = "TAXOR";
 TAXOR::TAXOR(TABool x, TABool y)
 {
-	result = x.getValue() != y.getValue() ? true: false;
+	value1.setValue(x.getValue());
+	value2.setValue(y.getValue());
 }
 
 TAXOR::TAXOR(TABool x, TALessThan y)
 {
-	result = x.getValue() != y.getResult() ? true: false;
+	value1.setValue(x.getValue());
+	value2.setValue(y.getResult());
+
 }
 
 TAXOR::TAXOR(TABool x, TALessThanOrEquals y)
-
 {
-	result = x.getValue() != y.getResult() ? true: false;
+	value1.setValue(x.getValue());
+	value2.setValue(y.getResult());
+
 }
 
 TAXOR::TAXOR(TABool x, TAGreaterThan y)
 {
-	result = x.getValue() != y.getResult() ? true: false;
+	value1.setValue(x.getValue());
+	value2.setValue(y.getResult());
+
 }
 
 TAXOR::TAXOR(TABool x, TAGreaterThanOrEquals y)
-
 {
-	result = x.getValue() != y.getResult() ? true: false;
+	value1.setValue(x.getValue());
+	value2.setValue(y.getResult());
+
 }
 
-TAXOR::TAXOR(TABool x, TAEquals y)
+TAXOR::TAXOR(TABool x, TAEqual y)
 {
-	result = x.getValue() != y.getResult() ? true: false;
+	value1.setValue(x.getValue());
+	value2.setValue(y.getResult());
+
 }
 
 TAXOR::TAXOR(TALessThan y, TABool x)
 {
-	result = x.getValue() != y.getResult() ? true: false;
+	value1.setValue(x.getValue());
+	value2.setValue(y.getResult());
+
 }
 
 TAXOR::TAXOR(TAGreaterThan y, TABool x)
 {
-	result = x.getValue() != y.getResult() ? true: false;
+	value1.setValue(x.getValue());
+	value2.setValue(y.getResult());
+
 }
 
 TAXOR::TAXOR(TALessThanOrEquals y, TABool x)
 {
-	result = x.getValue() != y.getResult() ? true: false;
+	value1.setValue(x.getValue());
+	value2.setValue(y.getResult());
+
 }
 
 TAXOR::TAXOR(TAGreaterThanOrEquals y, TABool x)
 {
-	result = x.getValue() != y.getResult() ? true: false;
+	value1.setValue(x.getValue());
+	value2.setValue(y.getResult());
+
 }
 
-TAXOR::TAXOR(TAEquals y, TABool x)
+TAXOR::TAXOR(TAEqual y, TABool x)
 {
-	result = x.getValue() != y.getResult() ? true : false;
+	value1.setValue(x.getValue());
+	value2.setValue(y.getResult());
 }
-bool TAXOR::getResult()
+TABool TAXOR::getResult()
 {
 	return result;
 }
-
+void TAXOR::evaluate()
+{
+	result.setValue(value1.getValue() != value2.getValue());
+}
+void TAXOR::List()
+{
+	if (true)
+		std::cout << TAXOR::name.c_str() << std::endl;
+	else
+	{
+		std::cout << "( " << " )" << std::endl;
+	}
+}

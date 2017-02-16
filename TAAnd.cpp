@@ -2,63 +2,85 @@
 std::string TAAnd::name = "TAAnd";
 TAAnd::TAAnd(TABool x, TABool y)
 {
-	result = x.getValue() && y.getValue();
+	value1 = x.getValue();
+	value2 = y.getValue();
 }
 
 TAAnd::TAAnd(TABool x, TALessThan y)
 {
-	result = x.getValue() && y.getResult();
+	value1 = x.getValue();
+	value2 = y.getResult();
 }
 
 TAAnd::TAAnd(TABool x, TALessThanOrEquals y)
-
 {
-	result = x.getValue() && y.getResult();
+	value1 = x.getValue();
+	value2 = y.getResult();
 }
 
 TAAnd::TAAnd(TABool x, TAGreaterThan y)
 {
-	result = x.getValue() && y.getResult();
+	value1 = x.getValue();
+	value2 = y.getResult();
 }
 
 TAAnd::TAAnd(TABool x, TAGreaterThanOrEquals y)
 
 {
-	result = x.getValue() && y.getResult();
+	value1 = x.getValue();
+	value2 = y.getResult();
 }
 
-TAAnd::TAAnd(TABool x, TAEquals y)
+TAAnd::TAAnd(TABool x, TAEqual y)
 {
-	result = x.getValue() && y.getResult();
+	value1 = x.getValue();
+	value2 = y.getResult();
 }
 
 TAAnd::TAAnd(TALessThan y, TABool x)
 {
-	result = x.getValue() && y.getResult();
+	value1 = x.getValue();
+	value2 = y.getResult();
 }
 
 TAAnd::TAAnd(TAGreaterThan y, TABool x)
 {
-	result = x.getValue() && y.getResult();
+	value1 = x.getValue();
+	value2 = y.getResult();
 }
 
 TAAnd::TAAnd(TALessThanOrEquals y, TABool x)
 {
-	result = x.getValue() && y.getResult();
+	value1 = x.getValue();
+	value2 = y.getResult();
 }
 
 TAAnd::TAAnd(TAGreaterThanOrEquals y, TABool x)
 {
-	result = x.getValue() && y.getResult();
+	value1 = x.getValue();
+	value2 = y.getResult();
 }
 
-TAAnd::TAAnd(TAEquals y, TABool x)
+TAAnd::TAAnd(TAEqual y, TABool x)
 {
-	result = x.getValue() && y.getResult();
+	value1 = x.getValue();
+	value2 = y.getResult();
 }
 
+void TAAnd::evaluate()
+{
+	result = value1 && value2;
+}
 bool TAAnd::getResult()
 {
 	return result;
 }
-
+void TAAnd::List()
+{
+	if (true)
+		std::cout << TAAnd::name.c_str() << std::endl;
+	else
+	{
+		std::cout << "( "  << " )" << std::endl;
+	}
+}

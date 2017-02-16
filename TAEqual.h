@@ -4,20 +4,20 @@
 #include "TACeiling.h"
 #ifndef TAEqual_h
 #define TAEqual_h
-class TAEquals {
+class TAEqual {
 	static std::string name;
 private:
 	bool result;
+	TADouble value1;
+	TADouble value2;
 public:
-	TAEquals(TAInt,TAInt);
-	TAEquals(TADouble,TADouble);
-	TAEquals(TAInt,TACeiling);
-	TAEquals(TAInt,TADouble);
-	TAEquals(TADouble,TAInt);
-	void isEqual(TADouble,TADouble);
-	void isEqual(TAInt, TAInt);
-	void isEqual(TAInt , TADouble);
-	void isEqual(TADouble, TAInt);
+	TAEqual(TAInt,TAInt);
+	TAEqual(TADouble,TADouble);
+	TAEqual(TAInt,TACeiling);
+	TAEqual(TAInt,TADouble);
+	TAEqual(TADouble,TAInt);
+	void evaluate();
 	bool getResult();
+	void List();
 };
 #endif

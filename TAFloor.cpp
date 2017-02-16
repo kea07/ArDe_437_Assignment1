@@ -1,16 +1,29 @@
 #include "TAFloor.h"
 std::string TAFloor::name = "TAFloor";
+
 TAFloor::TAFloor(TADouble x)
 {
-	value.set(floor(x.getValue()));
+	value1 = x;
 }
 
 void TAFloor::setFloor(TADouble x)
 {
-	value.set(floor(x.getValue()));
+	value1 = x;
 }
-
+void TAFloor::evaluate()
+{
+	result.set(ceil(value1.getValue()));
+}
 TAInt TAFloor::getValue()
 {
-	return value;
+	return result;
+}
+void TAFloor::List()
+{
+	if (true)
+		std::cout << TAFloor::name.c_str() << std::endl;
+	else
+	{
+		std::cout << "( " << " )" << std::endl;
+	}
 }

@@ -2,6 +2,7 @@
 #include "TAInt.h"
 #ifndef TAInt_cpp
 #define TAInt_cpp
+#include <string>
 std::string TAInt::name = "TAInt";
 TAInt::TAInt()
 {
@@ -18,5 +19,14 @@ void TAInt::set(int x)
 int TAInt::getValue()
 {
 	return value;
+}
+void TAInt::List()
+{
+	if (variableName == "")
+		std::cout << TAInt::name << std::endl;
+	else
+	{
+		std::cout << "( " << variableName << " )" << std::endl;
+	}
 }
 #endif

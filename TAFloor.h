@@ -7,10 +7,13 @@
 class TAFloor {
 	static std::string name;
 private:
-	TAInt value;
+	TAInt result;
+	TADouble value1;
 public:
 	TAFloor(TADouble);
 	void setFloor(TADouble);
 	TAInt getValue();
+	void evaluate();
+	void List();
 };
 #endif

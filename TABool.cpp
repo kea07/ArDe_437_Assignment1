@@ -17,3 +17,12 @@ bool TABool::getValue()
 {
 	return value;
 }
+void TABool::List()
+{
+	if (variableName == "")
+		std::cout << TABool::name.c_str() << std::endl;
+	else
+	{
+		std::cout << "( " << variableName.c_str() << " )" << std::endl;
+	}
+}

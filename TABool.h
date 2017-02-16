@@ -13,6 +13,7 @@ public:
 	TABool(std::string);
 	void setValue(bool);
 	bool getValue();
+	void List();
 };
 
 #endif

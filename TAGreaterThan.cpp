@@ -2,17 +2,24 @@
 std::string TAGreaterThan::name = "TAGreaterThan";
 TAGreaterThan::TAGreaterThan(TAInt x, TAInt y)
 {
-	result = x.getValue() > y.getValue() ? true : false;
+	value1.setValue(x.getValue());
+	value2.setValue(y.getValue());
 }
 
+void TAGreaterThan::evaluate()
+{
+	result = value1.getValue() > value2.getValue();
+}
 TAGreaterThan::TAGreaterThan(TADouble x, TADouble y)
 {
-	result = x.getValue() > y.getValue() ? true : false;
+	value1.setValue(x.getValue());
+	value2.setValue(y.getValue());
 }
 
 TAGreaterThan::TAGreaterThan(TAInt x, TACeiling y)
 {
-	result = x.getValue() > y.getValue().getValue() ? true : false;
+	value1.setValue(x.getValue());
+	value2.setValue(y.getValue().getValue());
 }
 
 TAGreaterThan::TAGreaterThan(TAInt x, TADouble y)
@@ -21,32 +28,19 @@ TAGreaterThan::TAGreaterThan(TAInt x, TADouble y)
 }
 
 TAGreaterThan::TAGreaterThan(TADouble x, TAInt y)
-
 {
 	std::cout << "Type mismatch! Cannot compare the values of different types." << std::endl;
 }
-
-void TAGreaterThan::isGreaterThan(TADouble x,TADouble y)
-{
-	result = x.getValue() > y.getValue() ? true : false;
-}
-
-void TAGreaterThan::isGreaterThan(TAInt x, TAInt y)
-{
-	result = x.getValue() > y.getValue() ? true : false;
-}
-
-void TAGreaterThan::isGreaterThan(TAInt x, TADouble y)
-{
-	std::cout << "Type mismatch! Cannot compare the values of different types." << std::endl;
-}
-
-void TAGreaterThan::isGreaterThan(TADouble x, TAInt y)
-{
-	std::cout << "Type mismatch! Cannot compare the values of different types." << std::endl;
-}
-
 bool TAGreaterThan::getResult()
 {
 	return result;
+}
+void TAGreaterThan::List()
+{
+	if (true)
+		std::cout << TAGreaterThan::name.c_str() << std::endl;
+	else
+	{
+		std::cout << "( " << " )" << std::endl;
+	}
 }

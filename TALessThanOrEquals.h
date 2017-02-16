@@ -8,16 +8,16 @@ class TALessThanOrEquals {
 	static std::string name;
 private:
 	bool result;
+	TADouble value1;
+	TADouble value2;
 public:
 	TALessThanOrEquals(TAInt,TAInt);
 	TALessThanOrEquals(TADouble,TADouble);
 	TALessThanOrEquals(TAInt,TACeiling);
 	TALessThanOrEquals(TAInt,TADouble);
 	TALessThanOrEquals(TADouble,TAInt);
-	void isLessThanOrEquals(TADouble,TADouble);
-	void isLessThanOrEquals(TAInt, TAInt);
-	void isLessThanOrEquals(TAInt , TADouble);
-	void isLessThanOrEquals(TADouble, TAInt);
+	void evaluate();
 	bool getResult();
+	void List();
 };
 #endif
