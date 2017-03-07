@@ -14,43 +14,17 @@
 #include "TAOr.h"
 #include "TAAnd.h"
 #include "TAXOR.h"
+#include "Type.h"
+#include "TAPair.h"
+#include <list>
+#include "TAArray.h"
 using namespace std;
-/*
-template <class T, class Y>
-bool TAgreaterThan(T* x, Y* y)
-{
-	return x->getValue() >= y->getValue() ? true : false;
-}
-template <class T, class Y>
-bool TAlessThan(T*x, Y*y)
-{
-	return x->getValue() < y->getValue() ? true : false;
-}
-template <class T, class Y>
-bool TAequals(T* x, Y* y)
-{
-	return x->getValue() == y->getValue() ? true : false;
-}
-template <class T, class Y>
-class TAgreaterThanOrEquals {
-private:
-	bool retult;
-public:
-	TAgreaterThanOrEquals(T* x, Y* y)
-	{
-		retult =  x->getValue() >= y->getValue() ? true : false;
-
-	}
-};
-template <class T, class Y>
-bool TAlessThanOrEquals(T* x, Y* y)
-{
-	return x->getValue() <= y->getValue() ? true : false;
-}
-*/
-
 void main()
 {
-	TAInt x;
+	TAInt x("integer");
+	TADouble y("double");
+	TAPair g (x,y);
+	g.List();
+	cout << endl;
 	system("pause");
 }

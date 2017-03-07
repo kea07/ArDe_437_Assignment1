@@ -21,9 +21,9 @@ double TADouble::getValue()
 void TADouble::List()
 {
 	if (variableName == "")
-		std::cout << TADouble::name.c_str() << std::endl;
+		std::cout << TADouble::name.c_str();
 	else
 	{
-		std::cout << "( " << variableName.c_str() << " )" << std::endl;
+		std::cout << variableName.c_str();
 	}
 }

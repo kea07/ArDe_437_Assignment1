@@ -20,10 +20,14 @@ TAInt TACeiling::getValue()
 }
 void TACeiling::List()
 {
-	if (true)
+	if (name == "TACeiling")
+	{
 		std::cout << TACeiling::name.c_str() << std::endl;
+	}
 	else
 	{
-		std::cout << "( " << " )" << std::endl;
+		std::cout << "(";
+		value1.List();
+		std::cout << ")";
 	}
 }

@@ -18,10 +18,12 @@ TABool TANot::getValue()
 }
 void TANot::List()
 {
-	if (true)
+	if (name == "TANot")
 		std::cout << TANot::name.c_str() << std::endl;
 	else
 	{
-		std::cout << "( " << " )" << std::endl;
+		std::cout << "( ";
+		y.List(); 
+		std::cout << " )" << std::endl;
 	}
 }

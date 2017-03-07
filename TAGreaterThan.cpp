@@ -8,7 +8,7 @@ TAGreaterThan::TAGreaterThan(TAInt x, TAInt y)
 
 void TAGreaterThan::evaluate()
 {
-	result = value1.getValue() > value2.getValue();
+	result.setValue(value1.getValue() > value2.getValue());
 }
 TAGreaterThan::TAGreaterThan(TADouble x, TADouble y)
 {
@@ -31,16 +31,22 @@ TAGreaterThan::TAGreaterThan(TADouble x, TAInt y)
 {
 	std::cout << "Type mismatch! Cannot compare the values of different types." << std::endl;
 }
-bool TAGreaterThan::getResult()
+TABool TAGreaterThan::getResult()
 {
 	return result;
 }
 void TAGreaterThan::List()
 {
-	if (true)
+	if (name == "TAGreaterThan")
+	{
 		std::cout << TAGreaterThan::name.c_str() << std::endl;
+	}
 	else
 	{
-		std::cout << "( " << " )" << std::endl;
+		std::cout << "(";
+		value1.List();
+		std::cout << ", ";
+		value2.List();
+		std::cout << ")";
 	}
 }

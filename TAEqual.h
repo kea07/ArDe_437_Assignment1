@@ -2,12 +2,13 @@
 #include "TAInt.h"
 #include "TADouble.h"
 #include "TACeiling.h"
+#include "TABoolOperations.h"
 #ifndef TAEqual_h
 #define TAEqual_h
-class TAEqual {
+class TAEqual:public TABoolOperations {
 	static std::string name;
 private:
-	bool result;
+	TABool result;
 	TADouble value1;
 	TADouble value2;
 public:
@@ -17,7 +18,7 @@ public:
 	TAEqual(TAInt,TADouble);
 	TAEqual(TADouble,TAInt);
 	void evaluate();
-	bool getResult();
+	TABool getResult();
 	void List();
 };
 #endif

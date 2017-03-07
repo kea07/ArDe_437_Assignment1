@@ -6,27 +6,22 @@
 #include"TAGreaterThan.h"
 #include "TAGreaterThanOrEquals.h";
 #include "TAEqual.h"
+#include "TABoolOperations.h"
 #ifndef TAOr_h
 #define TAOr_h
-class TAOr {
+class TAOr : public TABoolOperations {
 	static std::string name;
 private:
 	TABool result;
 	TABool value1;
 	TABool value2;
 public:
-	TAOr(TABool , TABool );
-	TAOr(TABool , TALessThan );
-	TAOr(TABool , TALessThanOrEquals );
-	TAOr(TABool , TAGreaterThan );
-	TAOr(TABool , TAGreaterThanOrEquals );
-	TAOr(TABool , TAEqual );
-	//
-	TAOr(TALessThan , TABool );
-	TAOr(TAGreaterThan , TABool );
-	TAOr(TALessThanOrEquals , TABool );
-	TAOr(TAGreaterThanOrEquals , TABool );
-	TAOr(TAEqual , TABool );
+	TAOr(TABool, TABool);
+	TAOr(TABool, TABoolOperations&);
+	TAOr(TABoolOperations&, TABool);
+	TAOr(TABoolOperations&, TABoolOperations&);
+
+
 	void evaluate();
 	TABool getResult();
 	void List();

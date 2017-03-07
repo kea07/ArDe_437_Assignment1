@@ -8,7 +8,7 @@ TAEqual::TAEqual(TAInt x, TAInt y)
 
 void TAEqual::evaluate()
 {
-	result = value1.getValue() == value2.getValue();
+	result.setValue(value1.getValue() == value2.getValue());
 }
 TAEqual::TAEqual(TADouble x, TADouble y)
 {
@@ -31,16 +31,22 @@ TAEqual::TAEqual(TADouble x, TAInt y)
 {
 	std::cout << "Type mismatch! Cannot compare the values of different types." << std::endl;
 }
-bool TAEqual::getResult()
+TABool TAEqual::getResult()
 {
 	return result;
 }
 void TAEqual::List()
 {
-	if (true)
+	if (name == "TAEqual")
+	{
 		std::cout << TAEqual::name.c_str() << std::endl;
+	}
 	else
 	{
-		std::cout << "( " << " )" << std::endl;
+		std::cout << "(";
+		value1.List();
+		std::cout << ", ";
+		value2.List();
+		std::cout << ")";
 	}
 }

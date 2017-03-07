@@ -8,7 +8,7 @@ TALessThanOrEquals::TALessThanOrEquals(TAInt x, TAInt y)
 
 void TALessThanOrEquals::evaluate()
 {
-	result = value1.getValue() <= value2.getValue();
+	result.setValue( value1.getValue() <= value2.getValue());
 }
 TALessThanOrEquals::TALessThanOrEquals(TADouble x, TADouble y)
 {
@@ -31,16 +31,22 @@ TALessThanOrEquals::TALessThanOrEquals(TADouble x, TAInt y)
 {
 	std::cout << "Type mismatch! Cannot compare the values of different types." << std::endl;
 }
-bool TALessThanOrEquals::getResult()
+TABool TALessThanOrEquals::getResult()
 {
 	return result;
 }
 void TALessThanOrEquals::List()
 {
-	if (true)
+	if (name == "TALessThanOrEquals")
+	{
 		std::cout << TALessThanOrEquals::name.c_str() << std::endl;
+	}
 	else
 	{
-		std::cout << "( " << " )" << std::endl;
+		std::cout << "(";
+		value1.List();
+		std::cout << ", ";
+		value2.List();
+		std::cout << ")";
 	}
 }

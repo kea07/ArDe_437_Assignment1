@@ -2,92 +2,47 @@
 std::string TAXOR::name = "TAXOR";
 TAXOR::TAXOR(TABool x, TABool y)
 {
-	value1.setValue(x.getValue());
-	value2.setValue(y.getValue());
+	value1 = x;
+	value2 = y;
 }
 
-TAXOR::TAXOR(TABool x, TALessThan y)
+TAXOR::TAXOR(TABoolOperations &y, TABool x)
 {
-	value1.setValue(x.getValue());
-	value2.setValue(y.getResult());
-
+	value1 = x;
+	//value2 = y;
 }
 
-TAXOR::TAXOR(TABool x, TALessThanOrEquals y)
+TAXOR::TAXOR(TABoolOperations &, TABoolOperations &)
 {
-	value1.setValue(x.getValue());
-	value2.setValue(y.getResult());
 
 }
 
-TAXOR::TAXOR(TABool x, TAGreaterThan y)
+TAXOR::TAXOR(TABool x, TABoolOperations &y)
 {
 	value1.setValue(x.getValue());
-	value2.setValue(y.getResult());
-
+	value2 = y.getResult();
 }
 
-TAXOR::TAXOR(TABool x, TAGreaterThanOrEquals y)
+void TAXOR::evaluate()
 {
-	value1.setValue(x.getValue());
-	value2.setValue(y.getResult());
-
-}
-
-TAXOR::TAXOR(TABool x, TAEqual y)
-{
-	value1.setValue(x.getValue());
-	value2.setValue(y.getResult());
-
-}
-
-TAXOR::TAXOR(TALessThan y, TABool x)
-{
-	value1.setValue(x.getValue());
-	value2.setValue(y.getResult());
-
-}
-
-TAXOR::TAXOR(TAGreaterThan y, TABool x)
-{
-	value1.setValue(x.getValue());
-	value2.setValue(y.getResult());
-
-}
-
-TAXOR::TAXOR(TALessThanOrEquals y, TABool x)
-{
-	value1.setValue(x.getValue());
-	value2.setValue(y.getResult());
-
-}
-
-TAXOR::TAXOR(TAGreaterThanOrEquals y, TABool x)
-{
-	value1.setValue(x.getValue());
-	value2.setValue(y.getResult());
-
-}
-
-TAXOR::TAXOR(TAEqual y, TABool x)
-{
-	value1.setValue(x.getValue());
-	value2.setValue(y.getResult());
+	result.setValue(value1.getValue() != value2.getValue());
 }
 TABool TAXOR::getResult()
 {
 	return result;
 }
-void TAXOR::evaluate()
-{
-	result.setValue(value1.getValue() != value2.getValue());
-}
 void TAXOR::List()
 {
-	if (true)
+	if (name == "TAXOR")
+	{
 		std::cout << TAXOR::name.c_str() << std::endl;
+	}
 	else
 	{
-		std::cout << "( " << " )" << std::endl;
+		std::cout << "(";
+		value1.List();
+		std::cout << ", ";
+		value2.List();
+		std::cout << ")";
 	}
 }

@@ -23,10 +23,10 @@ int TAInt::getValue()
 void TAInt::List()
 {
 	if (variableName == "")
-		std::cout << TAInt::name << std::endl;
+		std::cout << TAInt::name; 
 	else
 	{
-		std::cout << "( " << variableName << " )" << std::endl;
+		std::cout <<  variableName ;
 	}
 }
 #endif

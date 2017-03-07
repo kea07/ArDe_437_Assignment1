@@ -24,6 +24,8 @@ void TAFloor::List()
 		std::cout << TAFloor::name.c_str() << std::endl;
 	else
 	{
-		std::cout << "( " << " )" << std::endl;
+		std::cout << "( ";
+		value1.List();
+		std::cout << " )" << std::endl;
 	}
 }

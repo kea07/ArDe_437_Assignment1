@@ -2,7 +2,8 @@
 #ifndef TAInt_h
 #define TAInt_h
 #include <iostream>
-class TAInt {
+#include "TANumber.h"
+class TAInt :public TANumber {
 	static std::string name;
 private:
 	int value;

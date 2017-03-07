@@ -2,92 +2,47 @@
 std::string TAOr::name = "TAOr";
 TAOr::TAOr(TABool x, TABool y)
 {
-	value1.setValue(x.getValue());
-	value2.setValue(y.getValue());
+	value1 = x;
+	value2 = y;
 }
 
-TAOr::TAOr(TABool x, TALessThan y)
+TAOr::TAOr(TABoolOperations &y, TABool x)
 {
-	value1.setValue(x.getValue());
-	value2.setValue(y.getResult());
-
+	value1 = x;
+	//value2 = y;
 }
 
-TAOr::TAOr(TABool x, TALessThanOrEquals y)
+TAOr::TAOr(TABoolOperations &, TABoolOperations &)
 {
-	value1.setValue(x.getValue());
-	value2.setValue(y.getResult());
 
 }
 
-TAOr::TAOr(TABool x, TAGreaterThan y)
+TAOr::TAOr(TABool x, TABoolOperations &y)
 {
 	value1.setValue(x.getValue());
-	value2.setValue(y.getResult());
-
+	value2 = y.getResult();
 }
 
-TAOr::TAOr(TABool x, TAGreaterThanOrEquals y)
+void TAOr::evaluate()
 {
-	value1.setValue(x.getValue());
-	value2.setValue(y.getResult());
-
-}
-
-TAOr::TAOr(TABool x, TAEqual y)
-{
-	value1.setValue(x.getValue());
-	value2.setValue(y.getResult());
-
-}
-
-TAOr::TAOr(TALessThan y, TABool x)
-{
-	value1.setValue(x.getValue());
-	value2.setValue(y.getResult());
-
-}
-
-TAOr::TAOr(TAGreaterThan y, TABool x)
-{
-	value1.setValue(x.getValue());
-	value2.setValue(y.getResult());
-
-}
-
-TAOr::TAOr(TALessThanOrEquals y, TABool x)
-{
-	value1.setValue(x.getValue());
-	value2.setValue(y.getResult());
-
-}
-
-TAOr::TAOr(TAGreaterThanOrEquals y, TABool x)
-{
-	value1.setValue(x.getValue());
-	value2.setValue(y.getResult());
-
-}
-
-TAOr::TAOr(TAEqual y, TABool x)
-{
-	value1.setValue(x.getValue());
-	value2.setValue(y.getResult());
+	result.setValue(value1.getValue() || value2.getValue());
 }
 TABool TAOr::getResult()
 {
 	return result;
 }
-void TAOr::evaluate()
-{
-	result.setValue(value1.getValue() || value2.getValue());
-}
 void TAOr::List()
 {
-	if (true)
+	if (name == "TAOr")
+	{
 		std::cout << TAOr::name.c_str() << std::endl;
+	}
 	else
 	{
-		std::cout << "( " << " )" << std::endl;
+		std::cout << "(";
+		value1.List();
+		std::cout << ", ";
+		value2.List();
+		std::cout << ")";
 	}
 }

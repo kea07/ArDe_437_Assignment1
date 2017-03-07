@@ -6,29 +6,24 @@
 #include"TAGreaterThan.h"
 #include "TAGreaterThanOrEquals.h";
 #include "TAEqual.h"
+#include "TABoolOperations.h"
 #ifndef TAAnd_h
 #define TAAnd_h
-class TAAnd {
+class TAAnd : public TABoolOperations {
 	static std::string name;
 private:
-	bool result;
-	bool value1;
-	bool value2;
+	TABool result;
+	TABool value1;
+	TABool value2;
 public:
 	TAAnd(TABool , TABool );
-	TAAnd(TABool , TALessThan );
-	TAAnd(TABool , TALessThanOrEquals );
-	TAAnd(TABool , TAGreaterThan );
-	TAAnd(TABool , TAGreaterThanOrEquals );
-	TAAnd(TABool , TAEqual );
-	//
-	TAAnd(TALessThan , TABool );
-	TAAnd(TAGreaterThan , TABool );
-	TAAnd(TALessThanOrEquals , TABool );
-	TAAnd(TAGreaterThanOrEquals , TABool );
-	TAAnd(TAEqual , TABool );
+	TAAnd(TABool , TABoolOperations&);
+	TAAnd(TABoolOperations&, TABool );
+	TAAnd(TABoolOperations&, TABoolOperations&);
+
+
 	void evaluate();
-	bool getResult();
+	TABool getResult();
 	void List();
 };
 #endif

@@ -2,8 +2,8 @@
 #include <iostream>
 #ifndef TABool_h
 #define TABool_h
-
-class TABool {
+#include "Type.h"
+class TABool : public Type {
 private: 
 	bool value;
 	static std::string name;

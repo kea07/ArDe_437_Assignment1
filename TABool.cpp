@@ -19,7 +19,7 @@ bool TABool::getValue()
 }
 void TABool::List()
 {
-	if (variableName == "")
+	if (name == "TABool")
 		std::cout << TABool::name.c_str() << std::endl;
 	else
 	{

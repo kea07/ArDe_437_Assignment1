@@ -2,12 +2,13 @@
 #include "TAInt.h"
 #include "TADouble.h"
 #include "TACeiling.h"
+#include "TABoolOperations.h"
 #ifndef TAGreaterThanOrEquals_h
 #define TAGreaterThanOrEquals_h
-class TAGreaterThanOrEquals {
+class TAGreaterThanOrEquals :public TABoolOperations {
 	static std::string name;
 private:
-	bool result;
+	TABool result;
 	TADouble value1;
 	TADouble value2;
 public:
@@ -16,7 +17,7 @@ public:
 	TAGreaterThanOrEquals(TAInt,TACeiling);
 	TAGreaterThanOrEquals(TAInt,TADouble);
 	TAGreaterThanOrEquals(TADouble,TAInt);
-	bool getResult();
+	TABool getResult();
 	void evaluate();
 	void List();
 };

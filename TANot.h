@@ -2,9 +2,10 @@
 #ifndef TANot_h
 #define TANot_h
 #include "TABool.h"
+#include "TABoolOperations.h"
 
 
-class TANot {
+class TANot:public TABoolOperations {
 	static std::string name;
 private:
 	TABool y;
