@@ -1,0 +1,9 @@
+The code is seperated to header and cpp files. There are 3 main clas heirerchies: TAType,
+TABoolOperations and TAArithmetics where all other classes inherit from. The code is easy 
+to add on for future development. The code is easy to understand but it included no enough
+comments. All problems asked for were implemented except that the arithmetic operations
+do not work and there are no runtime exceptions. For the arithmetics, i couldve made TAInt
+inherit from TADouble and upon adding or subtracting i can cast the double return value to 
+int and the problem would be solved. I added an abstract class called type that has
+all the prmitave types along with TAArray and TAPair inherit from it. This made the
+implementation of TAArray and TAPair alot easier.
