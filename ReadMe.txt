@@ -1,1 +1,1 @@
-Each type or comparator is represented in a seperated header and cpp file.
+To run the code, simply add the header and cpp files to your project's source folder and test the code in the main.cpp inside the void main() function. Everything is working except the runtime exceptions and the arithmetics in general (add, substract,multiply and divide).
