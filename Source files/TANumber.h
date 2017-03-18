@@ -7,6 +7,8 @@ private:
 
 public:
 	virtual void List();
+	virtual double getValue();
+	virtual void setValue(double);
 
 };
 #endif

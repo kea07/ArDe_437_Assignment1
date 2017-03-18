@@ -12,7 +12,7 @@ class TAMinus : public TAArithmetics {
 private:
 	TANumber &firstOperand;
 	TANumber &secondOperand;
-	Type &result;
+	TANumber *result;
 public:
 	TAMinus();
 	TAMinus(TANumber&, TANumber&);

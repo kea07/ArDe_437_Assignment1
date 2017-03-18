@@ -12,7 +12,7 @@ class TAMult : public TAArithmetics {
 private:
 	TANumber &firstOperand;
 	TANumber &secondOperand;
-	Type &result;
+	TANumber *result;
 public:
 	TAMult();
 	TAMult(TANumber&, TANumber&);

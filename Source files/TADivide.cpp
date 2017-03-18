@@ -11,7 +11,8 @@ TADivide::TADivide(TANumber &first, TANumber &second) :
 }
 void TADivide::evaluate()
 {
-
+	this->result = new TADouble();
+	result->setValue(firstOperand.getValue() / secondOperand.getValue());
 }
 void TADivide::List()
 {

@@ -11,7 +11,8 @@ TAMinus::TAMinus(TANumber &first, TANumber &second) :
 }
 void TAMinus::evaluate()
 {
-
+	this->result = new TADouble();
+	result->setValue(firstOperand.getValue() / secondOperand.getValue());
 }
 void TAMinus::List()
 {

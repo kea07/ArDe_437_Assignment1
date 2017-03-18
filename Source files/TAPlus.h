@@ -12,7 +12,8 @@ class TAPlus : public TAArithmetics {
 private:
 	TANumber &firstOperand;
 	TANumber &secondOperand;
-	Type &result;
+	TANumber *result;
+
 public:
 	TAPlus();
 	TAPlus(TANumber&, TANumber&);

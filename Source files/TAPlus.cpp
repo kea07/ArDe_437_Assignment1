@@ -11,7 +11,8 @@ TAPlus::TAPlus(TANumber &first, TANumber &second) :
 }
 void TAPlus::evaluate()
 {
-
+	this->result = new TADouble();
+	result->setValue(firstOperand.getValue() / secondOperand.getValue());
 }
 void TAPlus::List()
 {

@@ -29,12 +29,12 @@ void TAArray::addItem(Type &item)
 {
 	if (LastFilledIndex.getValue() < size.getValue())
 	{
-		arr[LastFilledIndex.getValue()] = item;
+		arr[int(LastFilledIndex.getValue())] = item;
 		LastFilledIndex.set(LastFilledIndex.getValue() + 1);
 	}
 }
 
 Type & TAArray::ArryayAccess(TAInt index)
 {
-	return arr[index.getValue()];
+	return arr[int(index.getValue())];
 }

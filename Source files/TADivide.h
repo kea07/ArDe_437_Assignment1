@@ -12,7 +12,8 @@ class TADivide : public TAArithmetics {
 private:
 	TANumber &firstOperand;
 	TANumber &secondOperand;
-	Type &result;
+	TANumber *result;
+
 public:
 	TADivide();
 	TADivide(TANumber&, TANumber&);
