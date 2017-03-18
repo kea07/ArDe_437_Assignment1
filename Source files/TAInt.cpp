@@ -16,7 +16,7 @@ void TAInt::set(int x)
 {
 	value = x;
 }
-int TAInt::getValue()
+double TAInt::getValue()
 {
 	return value;
 }

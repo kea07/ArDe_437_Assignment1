@@ -12,7 +12,7 @@ public:
 	TAInt();
 	TAInt(std::string);
 	void set(int);
-	int getValue();
+	double getValue();
 	void List();
 };
 #endif 
