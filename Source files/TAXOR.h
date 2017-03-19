@@ -4,7 +4,7 @@
 #include"TALessThan.h"
 #include"TALessThanOrEquals.h"
 #include"TAGreaterThan.h"
-#include "TAGreaterThanOrEquals.h";
+//#include "TAGreaterThanOrEquals.h";
 #include "TAEqual.h"
 #include "TABoolOperations.h"
 #ifndef TAXOR_h

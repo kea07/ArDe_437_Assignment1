@@ -11,7 +11,7 @@ private:
 public:
 	TAInt();
 	TAInt(std::string);
-	void set(int);
+	void setValue(int);
 	double getValue();
 	void List();
 };

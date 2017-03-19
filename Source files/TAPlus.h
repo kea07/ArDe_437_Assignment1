@@ -17,6 +17,7 @@ private:
 public:
 	TAPlus();
 	TAPlus(TANumber&, TANumber&);
+	void print();
 	void evaluate();
 	void List();
 

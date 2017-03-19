@@ -12,7 +12,7 @@ void TACeiling::setCeiling(TADouble x)
 }
 void TACeiling::evaluate()
 {
-	result.set(ceil(value1.getValue()));
+	result.setValue(ceil(value1.getValue()));
 }
 TAInt TACeiling::getValue()
 {

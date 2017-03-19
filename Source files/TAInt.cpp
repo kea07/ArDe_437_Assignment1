@@ -12,7 +12,7 @@ TAInt::TAInt(std::string str)
 {
 	variableName = str;
 }
-void TAInt::set(int x)
+void TAInt::setValue(int x)
 {
 	value = x;
 }

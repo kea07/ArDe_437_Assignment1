@@ -9,10 +9,14 @@ TAPlus::TAPlus(TANumber &first, TANumber &second) :
 	this->firstOperand = first;
 	this->secondOperand = second;
 }
+void TAPlus::print()
+{
+	std::cout << result->getValue() << std::endl;
+}
 void TAPlus::evaluate()
 {
 	this->result = new TADouble();
-	result->setValue(firstOperand.getValue() / secondOperand.getValue());
+	result->setValue(firstOperand.getValue() + secondOperand.getValue());
 }
 void TAPlus::List()
 {

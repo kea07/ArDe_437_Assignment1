@@ -18,7 +18,7 @@ TAArray::TAArray(string arrayName, string type, TAInt size)
 		arr = new TAArray[size.getValue()];
 	if (type == "TAPair")
 		arr = new TAPair[size.getValue()];
-	LastFilledIndex.set(0);
+	LastFilledIndex.setValue(0);
 }
 void TAArray::List()
 {
@@ -30,7 +30,7 @@ void TAArray::addItem(Type &item)
 	if (LastFilledIndex.getValue() < size.getValue())
 	{
 		arr[int(LastFilledIndex.getValue())] = item;
-		LastFilledIndex.set(LastFilledIndex.getValue() + 1);
+		LastFilledIndex.setValue(LastFilledIndex.getValue() + 1);
 	}
 }
 

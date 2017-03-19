@@ -12,7 +12,7 @@ void TAFloor::setFloor(TADouble x)
 }
 void TAFloor::evaluate()
 {
-	result.set(ceil(value1.getValue()));
+	result.setValue(ceil(value1.getValue()));
 }
 TAInt TAFloor::getValue()
 {
