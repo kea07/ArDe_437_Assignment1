@@ -12,7 +12,7 @@ TAMult::TAMult(TANumber &first, TANumber &second) :
 void TAMult::evaluate()
 {
 	this->result = new TADouble();
-	result->setValue(firstOperand.getValue() / secondOperand.getValue());
+	result->setValue(firstOperand.getValue() * secondOperand.getValue());
 }
 void TAMult::List()
 {
