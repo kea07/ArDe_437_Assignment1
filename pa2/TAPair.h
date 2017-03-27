@@ -17,5 +17,6 @@ public:
 	void List();
 	Type &first();
 	Type &next();
+	double getValue();
 };
 #endif

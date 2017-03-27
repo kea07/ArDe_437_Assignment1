@@ -55,8 +55,13 @@ std::string TALessThanOrEquals::getOperationName()
 {
 	return name;
 }
+TALessThanOrEquals::TALessThanOrEquals(Type *x, Type *y)
+{
+	value1.setValue(x->getValue());
+	value2.setValue(y->getValue());
+}
 
-TAPair TALessThanOrEquals::getOperands()
+/*TAPair TALessThanOrEquals::getOperands()
 {
 	return TAPair(value1,value2);
-}
+}*/

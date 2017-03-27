@@ -14,6 +14,7 @@ private:
 	TADouble value1;
 	TADouble value2;
 public:
+	TAEqual(Type*, Type*);
 	TAEqual(TAInt,TAInt);
 	TAEqual(TADouble,TADouble);
 	TAEqual(TAInt,TACeiling);

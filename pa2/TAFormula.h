@@ -8,7 +8,7 @@
 class TAFormula : public TABoolOperations {
 private:
 public:
-	virtual void evaluate(TADomain ,TABoolOperations*) = 0;
+	virtual void evaluate() = 0;
 	TABool getResult() = 0;
 };
 #endif

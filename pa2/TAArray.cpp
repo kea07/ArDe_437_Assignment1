@@ -47,3 +47,8 @@ TAInt TAArray::getSize()
 {
 	return size;
 }
+
+double TAArray::getValue()
+{
+	return 0.0;
+}

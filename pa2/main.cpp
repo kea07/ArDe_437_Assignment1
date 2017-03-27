@@ -18,6 +18,7 @@
 #include "TAPair.h"
 #include "TAArray.h"
 #include <list>
+#include "TAThereExists.h"
 #include "TAArray.h"
 #include "TAArithmetics.h"
 #include "TAPlus.h"
@@ -37,7 +38,7 @@ void main()
 		arr[i].List();
 	}
 	//*/
-	/*
+	
 	TAInt x("integer");
 	x.setValue(16);
 	ff.push_back(&x);
@@ -74,14 +75,19 @@ void main()
 	TALessThanOrEquals u(x,y);
 	
 	cout << u.getOperationName().c_str();
-	u.getOperands().first().List();
+//	u.getOperands().first().List();
 	//hh.
 	//kl.insert(3);
 	constan.getVector().at(0)->List();
 	//TALessThan(constan.getVector().at(0), constan.getVector().at(0));
-	*/
-	TABool x;
-	x.setValue(true);
-	cout << x.getValue();
+	x.setValue(14);
+	string uu = "TAEqual";
+	TAThereExists yy(constan,uu,x);
+	yy.evaluate();
+	cout << endl;
+	cout << yy.getResult().getValue();
+
+
+
 	system("pause");
 }

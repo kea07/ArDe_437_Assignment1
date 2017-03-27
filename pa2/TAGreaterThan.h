@@ -22,6 +22,6 @@ public:
 	TABool getResult();
 	void List();
 	std::string getOperationName();
-	TAPair getOperands();
+	//TAPair getOperands();
 };
 #endif

@@ -35,6 +35,11 @@ TABool TAGreaterThanOrEquals::getResult()
 {
 	return result;
 }
+TAGreaterThanOrEquals::TAGreaterThanOrEquals(Type *x, Type *y)
+{
+	value1.setValue(x->getValue());
+	value2.setValue(y->getValue());
+}
 void TAGreaterThanOrEquals::List()
 {
 	if (name == "TAGreaterThanOrEquals")

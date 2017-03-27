@@ -12,7 +12,8 @@ public:
 	TABool();
 	TABool(std::string);
 	void setValue(bool);
-	TABool *getValue();
+	double getValue();
+	
 	void List();
 };
 

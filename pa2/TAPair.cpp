@@ -37,3 +37,8 @@ Type &TAPair::next()
 {
 	return SecondElement;
 }
+
+double TAPair::getValue()
+{
+	return 0.0;
+}

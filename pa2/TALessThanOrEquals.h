@@ -21,7 +21,8 @@ public:
 	TABool getResult();
 	void List();
 	std::string getOperationName();
-	TAPair getOperands();
+	TALessThanOrEquals(Type * , Type * );
+//	TAPair getOperands();
 
 };
 #endif

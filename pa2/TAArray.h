@@ -23,5 +23,6 @@ public:
 	void addItem(Type&);
 	Type *ArryayAccess(TAInt);
 	TAInt getSize();
+	double getValue();
 };
 #endif

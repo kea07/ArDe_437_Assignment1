@@ -10,9 +10,10 @@ void TAGreaterThan::evaluate()
 {
 	result.setValue(value1.getValue() > value2.getValue());
 }
-TAGreaterThan::TAGreaterThan(Type *, Type *)
+TAGreaterThan::TAGreaterThan(Type *x, Type *y)
 {
-
+	value1.setValue(x->getValue());
+	value2.setValue(y->getValue());
 }
 TAGreaterThan::TAGreaterThan(TADouble x, TADouble y)
 {
@@ -60,7 +61,8 @@ std::string TAGreaterThan::getOperationName()
 	return name;
 }
 
-TAPair TAGreaterThan::getOperands()
+/*TAPair TAGreaterThan::getOperands()
 {
 	return TAPair(value1,value2);
 }
+*/

@@ -18,6 +18,7 @@ public:
 	TAGreaterThanOrEquals(TAInt,TADouble);
 	TAGreaterThanOrEquals(TADouble,TAInt);
 	TABool getResult();
+	TAGreaterThanOrEquals(Type * , Type * );
 	void evaluate();
 	void List();
 	std::string getOperationName();

@@ -1,5 +1,10 @@
 #include "TAEqual.h"
 std::string TAEqual::name = "TAEqual";
+TAEqual::TAEqual(Type *x, Type *y)
+{
+	value1.setValue(x->getValue());
+	value2.setValue(y->getValue());
+}
 TAEqual::TAEqual(TAInt x, TAInt y)
 {
 	value1.setValue(x.getValue());

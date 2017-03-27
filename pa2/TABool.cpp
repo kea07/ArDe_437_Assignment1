@@ -13,11 +13,9 @@ void TABool::setValue(bool x)
 	value = x;
 }
 
-TABool *TABool::getValue()
+double TABool::getValue()
 {
-	TABool x;
-	x.setValue(this->value);
-	return &x;
+	return bool(value);
 }
 void TABool::List()
 {

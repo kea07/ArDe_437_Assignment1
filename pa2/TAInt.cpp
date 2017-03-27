@@ -18,7 +18,7 @@ void TAInt::setValue(int x)
 }
 double TAInt::getValue()
 {
-	return value;
+	return int(value);
 }
 void TAInt::List()
 {
