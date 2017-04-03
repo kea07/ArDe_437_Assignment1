@@ -3,9 +3,8 @@
 #define TANot_h
 #include "TABool.h"
 #include "TABoolOperations.h"
-
-
-class TANot:public TABoolOperations {
+#include "TAFormula.h"
+class TANot:public TAFormula {
 	static std::string name;
 private:
 	TABool y;

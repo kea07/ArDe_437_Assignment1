@@ -5,7 +5,8 @@
 #include "TABoolOperations.h"
 #ifndef TAGreaterThanOrEquals_h
 #define TAGreaterThanOrEquals_h
-class TAGreaterThanOrEquals :public TABoolOperations {
+#include "TAFormula.h"
+class TAGreaterThanOrEquals :public TAFormula {
 	static std::string name;
 private:
 	TABool result;

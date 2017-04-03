@@ -9,7 +9,7 @@
 #include "TABoolOperations.h"
 #ifndef TAOr_h
 #define TAOr_h
-class TAOr : public TABoolOperations {
+class TAOr : public TAFormula {
 	static std::string name;
 private:
 	TABool result;

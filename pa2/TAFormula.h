@@ -10,5 +10,6 @@ private:
 public:
 	virtual void evaluate() = 0;
 	TABool getResult() = 0;
+	virtual void List()=0;
 };
 #endif

@@ -4,10 +4,11 @@
 #include "TACeiling.h"
 #include "TABoolOperations.h"
 #include "TAPair.h"
+#include "TAFormula.h"
 #ifndef TAEqual_h
 #define TAEqual_h
 
-class TAEqual:public TABoolOperations {
+class TAEqual:public TAFormula {
 	static std::string name;
 private:
 	TABool result;

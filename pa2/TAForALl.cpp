@@ -95,6 +95,7 @@ void TAForAll::evaluate()
 								break;
 							}
 							else
+
 								result.setValue(true);
 						}
 					}

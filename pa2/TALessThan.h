@@ -3,9 +3,10 @@
 #include "TADouble.h"
 #include "TACeiling.h"
 #include "TABoolOperations.h"
+#include "TAFormula.h"
 #ifndef TALessThan_h
 #define TALessThan_h
-class TALessThan:public TABoolOperations {
+class TALessThan:public TAFormula {
 	static std::string name;
 private:
 	TABool result;
